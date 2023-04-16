@@ -1,0 +1,4 @@
+Django==3.1.8
+flake8==3.10.0
+mypy==0.910
+pytest==6.2.5
