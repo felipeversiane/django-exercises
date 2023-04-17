@@ -1,5 +1,5 @@
 from django import forms
-from .models import ItemBatch
+from myapp.models import ItemBatch
 
 
 class SomeForm(forms.ModelForm):
