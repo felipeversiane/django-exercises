@@ -8,5 +8,5 @@ urlpatterns = [
     path('',    home),
     path('form/', form),
     path('forms/', forms),
-    path('formsucessfully', formsucessfully),
+    path('formsucessfully/', formsucessfully),
 ]

@@ -1,24 +1,24 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
+# from django.http import HttpResponse
 
 # Create your views here.
 
 
 def home(request):
-    data = "home1"
-    return HttpResponse(data)
+    return render(request, 'form/home.html')
 
 
 def form(request):
-    data = "form"
-    return HttpResponse(data)
+    return render(request, 'form/form.html')
 
 
 def forms(request):
-    data = "forms"
-    return HttpResponse(data)
+    return render(request, 'form/forms.html')
 
 
 def formsucessfully(request):
-    data = "formsucess"
-    return HttpResponse(data)
+    return render(request, 'form/formsucessfully.html')
+
+
+def error(request):
+    return render(request, 'form/error.html')

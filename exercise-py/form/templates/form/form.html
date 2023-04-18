@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A common site</title>
+	<link rel="stylesheet" href="form.css">
+</head>
+<style>
+	
+	body {
+			font-family: Arial, sans-serif;
+			background-color: #F2F2F2;
+			padding: 20px;
+		}
+		h2 {
+			text-align: center;
+			color: #333333;
+			margin-bottom: 20px;
+		}
+		form {
+			background-color: #FFFFFF;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #333333;
+		}
+		input[type="text"],
+		input[type="email"],
+		textarea {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #CCCCCC;
+			border-radius: 5px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			font-size: 16px;
+			color: #555555;
+			background-color: #F8F8F8;
+		}
+		input[type="submit"],
+		input[type="button"] {
+			background-color: #333333;
+			color: #FFFFFF;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-right: 10px;
+			transition: background-color 0.2s;
+		}
+		input[type="submit"]:hover,
+		input[type="button"]:hover {
+			background-color: #555555;
+		}
+		.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+
+input[type="button"]:nth-child(2) {
+    background-color: #555555;
+    /* a cor de fundo é diferente do primeiro botão */
+}
+
+input[type="button"]:nth-child(2):hover {
+    background-color: #777777;
+}
+#warning {
+	color : red;
+	font-family: sans-serif;
+}
+</style>
+<body>
+    <h2>Formulário de Feedback</h2>
+    <form action="formsucessfully" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required value="__name__"><br><br>
+        
+        <label for="email">E-mail:</label> 
+        <input type="text" id="email" name="email" required value="__email__"><br><br>
+        <p id="warning">__error__</p>
+		
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="5" cols="30" required >__feedback__</textarea><br><br>
+		
+        
+        <input type="submit" value="Enviar">
+        <input type="button" value="Voltar" onclick="window.location.href='http://localhost:8000/formapp'">
+    </form>
+
+</body>
+</html>
